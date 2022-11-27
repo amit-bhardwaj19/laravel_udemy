@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('posts/{id}', function ($id) {
+    return 'Blog Post '.$id;
+})->name('posts.show');
